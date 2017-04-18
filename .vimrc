@@ -1,9 +1,5 @@
 set nocompatible
 
-execute pathogen#infect()
-filetype plugin indent on
-runtime macros/matchit.vim
-
 set background=light
 set backspace=indent,eol,start
 set nowrap
