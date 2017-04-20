@@ -1,5 +1,4 @@
 function fish_prompt --description 'Write out the prompt'
-	
 	set -l last_status $status
 
 	# Just calculate these once, to save a few cycles when displaying the prompt
@@ -35,8 +34,6 @@ function fish_prompt --description 'Write out the prompt'
 			end
 		end
 	end
-
-	set -l delim ''
 
 	switch $USER
 
@@ -78,5 +75,5 @@ function fish_prompt --description 'Write out the prompt'
                 echo $PWD | sed -e "s|^$HOME|~|"
         end
 
-	echo -n -s "$__fish_prompt_user" "$USER" "$__fish_prompt_normal" ' ' "$__fish_prompt_cwd" (prompt_cwd) (set_color FFFFFF) (__fish_git_prompt) "$__fish_prompt_normal" "$prompt_status" "$delim" ' '
+	echo -n -s "$__fish_prompt_user" "$USER" ' ' "$__fish_prompt_host" "$__fish_prompt_hostname" ' ' "$__fish_prompt_cwd" (prompt_cwd) (set_color FFFFFF) (__fish_git_prompt) "$__fish_prompt_normal" "$prompt_status" ' '
 end
