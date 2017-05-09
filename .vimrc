@@ -1,3 +1,10 @@
+let g:latex_to_unicode_auto = 1
+let g:default_julia_version = "devel"
+
+call plug#begin('~/.vim/plugged')
+Plug 'JuliaEditorSupport/julia-vim'
+call plug#end()
+
 set nocompatible
 
 set background=light
@@ -21,6 +28,5 @@ map ,v :vsp <C-R>=expand("%:p:h") . "/" <CR>
 highlight LineNr ctermfg=235
 highlight VertSplit term=bold
 highlight VertSplit cterm=bold
-let g:latex_to_unicode_auto = 1
 
 syntax on
